@@ -1,0 +1,50 @@
+/* MovieItem.css */
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  transition: transform 0.2s ease-in-out;
+}
+.card-img-top:hover {
+  transform: scale(1.05);
+}
+
+.card-body {
+  position: relative;
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.875rem;
+  color: #555;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.status-select {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.status {
+  margin-top: auto;
+}
