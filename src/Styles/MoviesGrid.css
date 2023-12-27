@@ -13,7 +13,7 @@
 }
 
 button {
-  background-color: #3498db;
+  background-color: #da0819;
   color: #fff;
   padding: 10px 15px;
   margin: 5px;
@@ -24,7 +24,7 @@ button {
 }
 
 button:hover {
-  background-color: #2980b9;
+  background-color: blue;
 }
 
 button:focus {

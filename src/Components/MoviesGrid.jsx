@@ -29,7 +29,7 @@ const MoviesGrid = ({ movies }) => {
 
   return (
     <div className="container">
-      <div>
+      <div className="buttonsgroup">
         <button onClick={() => setSelect("unwatched")}>Unwatched</button>
         <button onClick={() => setSelect("watching")}>Watching</button>
         <button onClick={() => setSelect("completed")}>Completed</button>
