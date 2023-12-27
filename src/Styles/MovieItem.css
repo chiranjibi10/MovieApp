@@ -1,15 +1,16 @@
 .card {
-  border: 1px solid #da0819;
+  border: 1px solid rgb(193, 191, 191);
   border-radius: 8px;
   overflow: hidden;
-
   cursor: pointer;
   margin-bottom: 20px;
+}
+.card:hover {
+  border: 1px solid #da0819;
 }
 
 .card-img-top {
   width: 100%;
-
   height: auto;
   border-bottom: 1px solid #ddd;
   transition: transform 0.2s ease-in-out;
@@ -33,7 +34,7 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   transition: -webkit-line-clamp 0.5s ease;
 }
 .card-text.expanded {
@@ -42,7 +43,7 @@
 
 .read-more-button {
   cursor: pointer;
-  color: #3498db;
+  color: #da0819;
   text-decoration: underline;
 }
 

@@ -11,8 +11,7 @@ select {
 }
 
 select:hover {
-  border-color: #007bff;
-  background-color: aqua;
+  border-color: #da0819;
 }
 
 option {
@@ -20,7 +19,7 @@ option {
   color: #333;
 }
 
-option:checked {
-  background-color: #007bff;
+option:hover {
+  background-color: #da0819 !important;
   color: #fff;
 }
