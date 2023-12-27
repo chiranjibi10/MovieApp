@@ -18,7 +18,7 @@ const MovieItem = ({ movie, onStatusChange }) => {
     >
       <img className="card-img-top" src={imageUrl} alt={`${title} poster`} />
       <div className="card-body">
-        <h3 className="card-title">{title}</h3>
+        <h1 className="card-title">{title}</h1>
         <p className={`card-text ${expanded ? "expanded" : ""}`}>{overview}</p>
         <p className="card-text">Rating: {vote_average}</p>
         <p className="card-text">Release Date: {release_date}</p>
