@@ -6,10 +6,14 @@
 
 .movie-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, minmax(300px, 1fr));
   grid-gap: 10px;
   justify-content: center;
   align-items: center;
+}
+.buttonsgroup {
+  display: flex;
+  justify-content: center;
 }
 
 button {
@@ -22,9 +26,14 @@ button {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+.heading {
+  text-align: center;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
 
 button:hover {
-  background-color: blue;
+  background-color: rgb(236, 80, 80);
 }
 
 button:focus {

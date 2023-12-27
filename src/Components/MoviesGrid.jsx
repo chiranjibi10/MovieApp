@@ -35,7 +35,7 @@ const MoviesGrid = ({ movies }) => {
         <button onClick={() => setSelect("completed")}>Completed</button>
         <button onClick={() => setSelect("holdList")}>Hold</button>
       </div>
-      <h1>{select.toUpperCase()} MOVIES</h1>
+      <h1 className="heading">{select.toUpperCase()} MOVIES</h1>
       <div className="movie-grid">
         {movies ? (
           movies.map((movie) => {
