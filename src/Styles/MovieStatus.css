@@ -1,0 +1,26 @@
+select {
+  padding: 5px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+select:hover {
+  border-color: #007bff;
+  background-color: aqua;
+}
+
+option {
+  background-color: #fff;
+  color: #333;
+}
+
+option:checked {
+  background-color: #007bff;
+  color: #fff;
+}
