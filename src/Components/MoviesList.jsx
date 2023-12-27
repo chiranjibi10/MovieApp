@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import MoviesGrid from "./MoviesGrid.jsx";
-import "../Styles/MovieList.css";
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
@@ -23,7 +22,6 @@ const MovieList = () => {
 
   return (
     <div className="movielist">
-      <h1 className="header">Movies For Refreshments</h1>
       <MoviesGrid movies={movies} />
     </div>
   );

@@ -8,7 +8,12 @@ const MoviesGrid = ({ movies }) => {
   useEffect(() => {
     const initialStatuses = {};
     movies.forEach((movie) => {
-      initialStatuses[movie.id] = "holdList";
+      const storedStatus = localStorage.getItem(`movieStatus_${movie.id}`);
+      if (storedStatus) {
+        initialStatuses[movie.id] = storedStatus;
+      } else {
+        initialStatuses[movie.id] = "unwatched";
+      }
     });
     setMovieStatuses(initialStatuses);
   }, [movies]);
@@ -20,19 +25,35 @@ const MoviesGrid = ({ movies }) => {
     }));
   };
 
+  const [select, setSelect] = useState("unwatched");
+
   return (
     <div className="container">
-      {" "}
+      <div>
+        <button onClick={() => setSelect("unwatched")}>Unwatched</button>
+        <button onClick={() => setSelect("watching")}>Watching</button>
+        <button onClick={() => setSelect("completed")}>Completed</button>
+        <button onClick={() => setSelect("holdList")}>Hold</button>
+      </div>
+      <h1>{select.toUpperCase()} MOVIES</h1>
       <div className="movie-grid">
         {movies ? (
-          movies.map((movie) => (
-            <MovieItem
-              key={movie.id}
-              movie={movie}
-              onStatusChange={handleStatusChange}
-              currentStatus={movieStatuses[movie.id]}
-            />
-          ))
+          movies.map((movie) => {
+            if (
+              movieStatuses[movie.id]?.toUpperCase() === select.toUpperCase()
+            ) {
+              return (
+                <MovieItem
+                  key={movie.id}
+                  movie={movie}
+                  onStatusChange={handleStatusChange}
+                  currentStatus={movieStatuses[movie.id]}
+                />
+              );
+            } else {
+              return false;
+            }
+          })
         ) : (
           <p>Loading...</p>
         )}
