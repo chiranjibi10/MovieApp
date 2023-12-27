@@ -12,10 +12,13 @@ const MovieItem = ({ movie, onStatusChange }) => {
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{overview}</p>
-        <h3 className="card-text">Rating: {vote_average}</h3>
+        <h3 className="card-text">Rating : {vote_average}</h3>
         <h3 className="card-text">Release Date:{release_date}</h3>
         <div className="status">
-          <MovieStatus movie={movie} onStatusChange={onStatusChange} />
+          <p>
+            Status:{""}
+            <MovieStatus movie={movie} onStatusChange={onStatusChange} />
+          </p>
         </div>
       </div>
     </div>

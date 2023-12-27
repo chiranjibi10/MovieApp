@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import MovieItem from "./MovieItem";
 import "../Styles/MoviesGrid.css";
 
-const MovieTable = ({ movies }) => {
+const MoviesGrid = ({ movies }) => {
   const [movieStatuses, setMovieStatuses] = useState({});
 
   useEffect(() => {
@@ -41,4 +41,4 @@ const MovieTable = ({ movies }) => {
   );
 };
 
-export default MovieTable;
+export default MoviesGrid;

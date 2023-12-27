@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../Styles/MovieStatus.css";
 
 const MovieStatus = ({ movie, onStatusChange }) => {
   const [status, setStatus] = useState("holdList");
@@ -8,8 +9,8 @@ const MovieStatus = ({ movie, onStatusChange }) => {
     setStatus(storedStatus || "holdList");
   }, [movie.id]);
 
-  const handleStatusChange = (event) => {
-    const selectedStatus = event.target.value;
+  const handleStatusChange = (e) => {
+    const selectedStatus = e.target.value;
     setStatus(selectedStatus);
     onStatusChange(movie.id, selectedStatus);
 
